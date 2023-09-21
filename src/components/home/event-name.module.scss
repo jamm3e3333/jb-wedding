@@ -1,0 +1,12 @@
+@import '../../styles/colors';
+
+.event-name {
+  background: $white-pale;
+  color: $pink-bright;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: .6rem;
+  margin: 1rem auto 0;
+  text-align: center;
+  letter-spacing: .8rem;
+}

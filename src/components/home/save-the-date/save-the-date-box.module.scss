@@ -1,0 +1,23 @@
+@import '../../../styles/colors';
+@import '../../../styles/variables';
+
+
+.savedate {
+  margin-top: 2rem;
+  background: $pink-bright-faded;
+  color: $white;
+  padding: 1rem;
+
+  &--border {
+    border: $white dashed .1rem;
+    padding: 2rem 2rem;
+    font-family: $font-fancy;
+    font-size: 3rem;
+    display: flex;
+
+    div {
+      padding: 0 2.5rem;
+      letter-spacing: .6rem;
+    }
+  }
+}

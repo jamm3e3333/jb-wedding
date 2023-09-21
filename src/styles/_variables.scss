@@ -1,0 +1,27 @@
+@import './colors';
+
+$neon-text-shadow:
+    0 0 7px $white,
+    0 0 10px $white,
+    0 0 21px $white,
+    0 0 42px $neon-red,
+    0 0 82px $neon-red,
+    0 0 92px $neon-red,
+    0 0 102px $neon-red,
+    0 0 151px $neon-red;
+
+$red-box-shadow:
+    0 0 .2rem $white,
+    0 0 .2rem $white,
+    0 0 2rem $brown-red,
+    0 0 0.8rem $brown-red,
+    inset 0 0 1rem $brown-red;
+
+$green-box-shadow:
+    0 0 .2rem $white,
+    0 0 .2rem $white,
+    0 0 2rem $green,
+    0 0 0.8rem $green,
+    inset 0 0 1rem $green;
+
+$font-fancy: 'Playfair Display', serif;

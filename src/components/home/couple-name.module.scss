@@ -1,0 +1,8 @@
+@import '../../styles/colors';
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.couple-name {
+  padding: 2rem;
+  @include big-fancy-font($white)
+}

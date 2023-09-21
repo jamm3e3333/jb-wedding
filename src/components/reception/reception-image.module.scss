@@ -1,0 +1,15 @@
+@import '../../styles/colors';
+
+.image-box {
+    display: inline-block;
+    height: 65rem;
+    padding: 5rem;
+
+    img {
+      opacity: .8;
+      overflow: hidden;
+      max-width: 100%;
+      max-height: 100%;
+    }
+}
+
