@@ -1,8 +1,14 @@
 @import '../../styles/colors';
-@import '../../styles/variables';
 @import '../../styles/mixins';
 
 .couple-name {
   padding: 2rem;
   @include big-fancy-font($white)
+
+}
+
+@media only screen and (max-width: 1200px) {
+  .couple-name {
+    font-size: $font-size-header-mobile;
+  }
 }

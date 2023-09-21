@@ -1,4 +1,5 @@
 @import '../../styles/colors';
+@import '../../styles/variables';
 
 .event-name {
   background: $white-pale;
@@ -9,4 +10,10 @@
   margin: 1rem auto 0;
   text-align: center;
   letter-spacing: .8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .event-name {
+    font-size: $font-size-para-mobile;
+  }
 }
