@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from "react";
 import {motion, useAnimation, useInView} from "framer-motion";
 import styles from './reception-image.module.scss'
 
-const JAKUB_LIFTING_BRENDA_IMAGE_FILE_PATH = '/img/jakub_lifting_brenda.jpeg'
+const JAKUB_LIFTING_BRENDA_IMAGE_FILE_PATH = './img/jakub_lifting_brenda.jpeg'
 const ReceptionImage: React.FC = () => {
   const receptionImgRef = useRef(null)
   const  isInView = useInView(receptionImgRef, { once: true })
