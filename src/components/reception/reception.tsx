@@ -6,8 +6,8 @@ import ReceptionText from "./reception-text";
 
 const Reception: React.FC = () => {
   return <Cover className={styles['reception']}>
-    <ReceptionImage/>
     <ReceptionText/>
+    <ReceptionImage/>
   </Cover>
 }
 
