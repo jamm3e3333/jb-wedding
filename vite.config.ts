@@ -7,5 +7,4 @@ export default defineConfig({
   build: {
     minify: 'terser',
   },
-  base: '/brenda-jakub-wedding/'
 })
