@@ -1,9 +1,11 @@
 @import '../../styles/colors';
 
 .image-box {
-    display: inline-block;
-    height: 65rem;
+    display: flex;
+    width: 35%;
     padding: 5rem;
+    justify-content: center;
+    align-items: center;
 
     img {
       opacity: .8;
@@ -17,12 +19,12 @@
   .image-box {
     display: block;
     margin: 0 auto;
+    width: 50rem;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .image-box {
-    height: 60rem;
+    width: 30rem;
   }
 }
-
