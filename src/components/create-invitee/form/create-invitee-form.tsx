@@ -10,6 +10,8 @@ import { createInviteeRequest } from '../create-invitee.request';
 import { handleOnPhoneChangeEvent } from '../../ui/form/event-handler/handle-on-phone-change-with-set-state';
 import { handlePhoneBlurEvent } from '../../ui/form/event-handler/handle-on-blur-phone-with-set-state';
 import { handleEmailBlurEvent } from '../../ui/form/event-handler/handle-on-blur-email-with-set-state';
+import SubmitMessage from './submit-message';
+import { AxiosError } from 'axios';
 
 const setInitialStateForSetStateFns = (
     ...args: (<T extends ''>(initialState: T) => void)[]
@@ -21,6 +23,9 @@ const setInitialStateForSetStateFns = (
 
 const CreateInviteeForm: React.FC = () => {
     const [isSubmitDisabled, setSubmitDisabled] = useState(false);
+    const [isSubmittedMessageDisplayed, setIsSubmittedMessageDisplayed] =
+        useState(false);
+    const [submittedMessage, setSubmittedMessage] = useState('');
 
     const {
         eventTargetValueState: name,
@@ -97,8 +102,9 @@ const CreateInviteeForm: React.FC = () => {
             return;
         }
 
+        let response: ReturnType<Awaited<typeof createInviteeRequest>>;
         try {
-            await createInviteeRequest({
+            response = await createInviteeRequest({
                 email,
                 name,
                 surname,
@@ -109,6 +115,7 @@ const CreateInviteeForm: React.FC = () => {
                 }),
                 ...(foodAllergies && { foodRestriction: foodAllergies }),
             });
+            console.log('axios response', response);
 
             setInitialStateForSetStateFns(
                 setInitialEmail,
@@ -119,8 +126,16 @@ const CreateInviteeForm: React.FC = () => {
                 setInitialQuestionsAndComments,
                 setInitialFoodAllergies
             );
-        } catch (error) {
-            console.log(error);
+        } catch (error: AxiosError) {
+            if (error.response.data.statusCode === 403) {
+                setSubmittedMessage(error.response.data.message);
+                setIsSubmittedMessageDisplayed(true);
+            }
+        } finally {
+            setTimeout(() => {
+                setIsSubmittedMessageDisplayed(false);
+                setSubmittedMessage('');
+            }, 5_000);
         }
     };
     return (
@@ -204,6 +219,9 @@ const CreateInviteeForm: React.FC = () => {
                     placeholder={'Can I bring any plátanos?'}
                 />
             </FormElement>
+            <SubmitMessage isDisplayed={isSubmittedMessageDisplayed}>
+                {submittedMessage}
+            </SubmitMessage>
             <SubmitButton
                 buttonValue={'Submit'}
                 name={'submit-invitee'}

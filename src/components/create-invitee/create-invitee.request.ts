@@ -11,7 +11,7 @@ export interface CreateInviteeInterface {
   questionOrComment?: string;
 }
 
-export const createInviteeRequest = async (message: CreateInviteeInterface) => {
+export const createInviteeRequest = (message: CreateInviteeInterface) => {
   return axios({
     url: CREATE_INVITEE_URL,
     method: 'post',
