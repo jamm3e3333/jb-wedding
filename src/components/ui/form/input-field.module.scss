@@ -2,6 +2,20 @@
 @import '../../../styles/variables';
 @import '../../../styles/mixins';
 
+.label-form {
+    padding: 1.5rem;
+    color: $shadow-black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.label-form--row {
+    flex-direction: row;
+    align-items: center;
+}
+
 .input-form {
     outline: none;
     font-size: $font-size-form;
@@ -19,16 +33,8 @@
     }
 }
 
-.label-form {
-    padding: 1.5rem;
-    color: $shadow-black;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.label-form--row {
-    flex-direction: row;
-    align-items: center;
+@media only screen and (max-width: 500px) {
+    .label-form {
+        padding: 1.5rem 0;
+    }
 }

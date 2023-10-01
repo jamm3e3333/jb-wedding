@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './invitee-header.module.scss';
+import styles from './cover-box-image.module.scss';
 import CoverWithImage, {
     ImageGradientInterface,
 } from '../../ui/cover-with-image';
 import Rsvp from './rsvp';
-import HeaderFillFormPara from './header-fill-form-para';
+import FillFormText from './fill-form-text';
 import RoutingButton from '../../ui/router/routing-button';
 
 const GRADIENT_DIRECTION = 'to right';
@@ -17,7 +17,7 @@ const imageGradient: ImageGradientInterface = {
     toColor: GRADIENT_TO_COLOR,
 };
 
-const InviteeHeader: React.FC = () => {
+const CoverBoxImage: React.FC = () => {
     return (
         <>
             <CoverWithImage
@@ -29,10 +29,10 @@ const InviteeHeader: React.FC = () => {
             >
                 <RoutingButton name="Home" path="/" />
                 <Rsvp />
-                <HeaderFillFormPara />
+                <FillFormText />
             </CoverWithImage>
         </>
     );
 };
 
-export default InviteeHeader;
+export default CoverBoxImage;

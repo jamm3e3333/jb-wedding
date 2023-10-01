@@ -1,7 +1,7 @@
-import {EmitEventWithSetStateHandlerType} from "./type/emit-event-with-set-state-handler.type";
+import {EventWithSetStateHandlerType} from "./type/event-with-set-state-handler.type";
 import {ChangeEvent} from "react";
 
-export const handlePhoneChangeEvent: EmitEventWithSetStateHandlerType<ChangeEvent<HTMLInputElement>, string> =
+export const handleOnPhoneChangeEvent: EventWithSetStateHandlerType<ChangeEvent<HTMLInputElement>, string> =
   (setState) =>
     (e) => {
       const phone = e.target.value.trim();

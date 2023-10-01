@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './header-fill-form-para.module.scss';
-const HeaderFillFormPara: React.FC = () => {
+import styles from './fill-form-text.module.scss';
+const FillFormText: React.FC = () => {
     return (
         <p className={styles['fillform-para']}>
             Please fill out the form below
@@ -8,4 +8,4 @@ const HeaderFillFormPara: React.FC = () => {
     );
 };
 
-export default HeaderFillFormPara;
+export default FillFormText;

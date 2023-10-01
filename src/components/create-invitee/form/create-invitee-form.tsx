@@ -2,14 +2,14 @@ import React, { FormEvent, useState } from 'react';
 import InputField from '../../ui/form/input-field';
 import useStateOnElementEventEmitHook from '../../../hooks/use-state-on-element-event-emit.hook';
 import TextAreaField from '../../ui/form/text-area-field';
-import styles from './invitee.module.scss';
-import InviteeField from '../../ui/form/invitee-field';
+import styles from './create-invitee.module.scss';
+import FormElement from '../../ui/form/form-element';
 import SubmitButton from '../../ui/form/submit-button';
-import useStateOnChangeCheckboxEventHook from '../../../hooks/use-stat-on-change-checkbox-event.hook';
+import useStateOnChangeCheckboxEventHook from '../../../hooks/use-state-on-change-checkbox-event.hook';
 import { createInviteeRequest } from '../create-invitee.request';
-import { handlePhoneChangeEvent } from '../../../event-handler/on-phone-change-handler-with-set-state';
-import { handlePhoneBlurEvent } from '../../../event-handler/on-blur-phone-handler-with-set-state';
-import { handleEmailBlurEvent } from '../../../event-handler/on-blur-email-handler-with-set-state';
+import { handleOnPhoneChangeEvent } from '../../ui/form/event-handler/handle-on-phone-change-with-set-state';
+import { handlePhoneBlurEvent } from '../../ui/form/event-handler/handle-on-blur-phone-with-set-state';
+import { handleEmailBlurEvent } from '../../ui/form/event-handler/handle-on-blur-email-with-set-state';
 
 const setInitialStateForSetStateFns = (
     ...args: (<T extends ''>(initialState: T) => void)[]
@@ -19,7 +19,7 @@ const setInitialStateForSetStateFns = (
     }
 };
 
-const InviteeForm: React.FC = () => {
+const CreateInviteeForm: React.FC = () => {
     const [isSubmitDisabled, setSubmitDisabled] = useState(false);
 
     const {
@@ -53,7 +53,7 @@ const InviteeForm: React.FC = () => {
         eventTargetValueIsValid: isPhoneValid,
         setInitialState: setInitialPhone,
     } = useStateOnElementEventEmitHook(
-        handlePhoneChangeEvent,
+        handleOnPhoneChangeEvent,
         handlePhoneBlurEvent
     );
 
@@ -90,7 +90,7 @@ const InviteeForm: React.FC = () => {
         if (
             !isNameValid &&
             !isPhoneValid &&
-            isSurnameValid &&
+            !isSurnameValid &&
             !isEmailValid &&
             !isDescriptionValid
         ) {
@@ -125,7 +125,7 @@ const InviteeForm: React.FC = () => {
     };
     return (
         <form className={styles['invitee-form']} onSubmit={handleSubmitInvitee}>
-            <InviteeField>
+            <FormElement>
                 <InputField
                     labelName={'Name'}
                     type="text"
@@ -146,8 +146,8 @@ const InviteeForm: React.FC = () => {
                     onBlur={onSurnameBlur}
                     isValid={isSurnameValid}
                 />
-            </InviteeField>
-            <InviteeField>
+            </FormElement>
+            <FormElement>
                 <InputField
                     labelName={'Phone Number'}
                     type="tel"
@@ -168,16 +168,16 @@ const InviteeForm: React.FC = () => {
                     onBlur={onEmailBlur}
                     isValid={isEmailValid}
                 />
-            </InviteeField>
-            <InviteeField>
+            </FormElement>
+            <FormElement>
                 <InputField
                     labelName={"Check if you're attending"}
                     type="checkbox"
                     onChange={onIsAttendingChange}
                     name={'is-attending'}
                 />
-            </InviteeField>
-            <InviteeField>
+            </FormElement>
+            <FormElement>
                 <TextAreaField
                     labelName={'Tell us something about you'}
                     name="invitee-description"
@@ -194,8 +194,8 @@ const InviteeForm: React.FC = () => {
                     onChange={onFoodAllergiesChange}
                     value={foodAllergies}
                 />
-            </InviteeField>
-            <InviteeField>
+            </FormElement>
+            <FormElement>
                 <TextAreaField
                     labelName={'Questions/Comments'}
                     onChange={onQuestionsCommentsChange}
@@ -203,7 +203,7 @@ const InviteeForm: React.FC = () => {
                     value={questionComments}
                     placeholder={'Can I bring any plátanos?'}
                 />
-            </InviteeField>
+            </FormElement>
             <SubmitButton
                 buttonValue={'Submit'}
                 name={'submit-invitee'}
@@ -213,4 +213,4 @@ const InviteeForm: React.FC = () => {
     );
 };
 
-export default InviteeForm;
+export default CreateInviteeForm;

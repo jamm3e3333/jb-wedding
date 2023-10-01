@@ -1,6 +1,6 @@
 import React from "react";
 
-export type EmitEventWithSetStateHandlerType<TEventEmitType, TSetStateValue> = (
+export type EventWithSetStateHandlerType<TEventEmitType, TSetStateValue> = (
   setState: (
     value: React.SetStateAction<TSetStateValue>
   ) => void
