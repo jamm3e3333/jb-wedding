@@ -1,0 +1,13 @@
+@import '../../../styles/colors';
+
+.routing-button {
+    padding: 1.2rem 2rem;
+    color: $white;
+    background: $pink-bright-faded;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    &:hover {
+        cursor: pointer;
+    }
+}

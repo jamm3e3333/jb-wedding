@@ -1,0 +1,9 @@
+@import '../../../styles/mixins';
+@import '../../../styles/colors';
+
+.fillform-para {
+    @include big-fancy-font($white);
+    margin: 0 auto;
+    font-size: 3rem;
+    font-weight: 700;
+}

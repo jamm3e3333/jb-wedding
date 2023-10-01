@@ -1,0 +1,19 @@
+.invitee-field {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+@media only screen and (max-width: 750px) {
+    .invitee-field {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .invitee-field {
+        display: block;
+        margin: 0 auto;
+    }
+}

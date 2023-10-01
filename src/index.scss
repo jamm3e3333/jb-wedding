@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 62.5%;
-  background: rgba(255, 255, 255, 1);
-  color: rgba(0, 0, 0, .9);
+    font-size: 62.5%;
+    background: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 0.9);
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 1.7;
-  padding: 0;
-  margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.7;
+    padding: 0;
+    margin: 0;
 }

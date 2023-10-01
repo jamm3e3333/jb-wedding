@@ -1,0 +1,38 @@
+@import '../../../styles/colors';
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.input-form {
+    outline: none;
+    font-size: $font-size-form;
+    padding: 1.2rem 3rem;
+    border: $pink-input-border solid 0.2rem;
+    border-radius: 0.3rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $pink-bright;
+    &::placeholder {
+        color: $pink-bright-placeholder;
+    }
+
+    input:checked {
+        background-color: $pink-bright;
+    }
+
+    &-invalid {
+        @include input-field-invalid();
+    }
+}
+
+.label-form {
+    padding: 1.5rem;
+    color: $shadow-black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.label-form--row {
+    flex-direction: row;
+    align-items: center;
+}
