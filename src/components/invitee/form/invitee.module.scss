@@ -1,0 +1,10 @@
+@import '../../../styles/mixins';
+
+.invitee-form {
+    margin: 5rem auto;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}

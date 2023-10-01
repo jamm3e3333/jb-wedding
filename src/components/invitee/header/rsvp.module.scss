@@ -1,0 +1,14 @@
+@import '../../../styles/colors';
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.rsvp {
+    @include big-fancy-font($white);
+    margin: 0 auto 40rem;
+}
+
+@media only screen and (max-height: 700px) {
+    .rsvp {
+        margin: 0 auto 15rem;
+    }
+}
