@@ -1,15 +1,18 @@
-import React, { ChangeEventHandler } from 'react';
+import React, { ChangeEventHandler, FocusEventHandler } from 'react';
 import styles from './text-area-field.module.scss';
+import InvalidFieldText from './invalid-field-text';
 
 const TextAreaField: React.FC<{
     name: string;
     placeholder: string;
     onChange: ChangeEventHandler;
     value: string;
-    labelName?: string;
+    labelName: string;
     className?: string;
     cols?: number;
     rows?: number;
+    isValid?: boolean;
+    onBlur?: FocusEventHandler;
 }> = (props) => {
     return (
         <label htmlFor={props.name} className={styles['label-form']}>
@@ -22,7 +25,11 @@ const TextAreaField: React.FC<{
                 rows={Number(props.rows ?? 10)}
                 onChange={props.onChange}
                 value={props.value}
+                onBlur={props.onBlur}
             ></textarea>
+            {!props.isValid && props.isValid !== undefined && (
+                <InvalidFieldText invalidTextName="empty field" />
+            )}
         </label>
     );
 };

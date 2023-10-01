@@ -72,6 +72,8 @@ const InviteeForm: React.FC = () => {
         eventTargetValueState: inviteeDescription,
         onChangeEventHandler: onInviteeDescriptionChange,
         setInitialState: setInitialDescription,
+        onBlurEventHandler: onInviteeDescriptionBlur,
+        eventTargetValueIsValid: isDescriptionValid,
     } = useStateOnElementEventEmitHook();
 
     const {
@@ -85,9 +87,16 @@ const InviteeForm: React.FC = () => {
         setSubmitDisabled(true);
         setTimeout(() => setSubmitDisabled(false), 10_000);
 
-        if (!isNameValid && !isPhoneValid && isSurnameValid && !isEmailValid) {
+        if (
+            !isNameValid &&
+            !isPhoneValid &&
+            isSurnameValid &&
+            !isEmailValid &&
+            !isDescriptionValid
+        ) {
             return;
         }
+
         try {
             await createInviteeRequest({
                 email,
@@ -175,6 +184,8 @@ const InviteeForm: React.FC = () => {
                     placeholder={'I like eating plátanos'}
                     onChange={onInviteeDescriptionChange}
                     value={inviteeDescription}
+                    onBlur={onInviteeDescriptionBlur}
+                    isValid={isDescriptionValid}
                 />
                 <TextAreaField
                     labelName={'Food allergies'}
