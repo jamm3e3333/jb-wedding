@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.scss';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Invitee from './components/invitee/invitee';
+import CreateInviteePage from './components/create-invitee/create-invitee-page';
 
 const router = createBrowserRouter([
     { path: '/', element: <App /> },
-    { path: '/invitee', element: <Invitee /> },
+    { path: '/invitee', element: <CreateInviteePage /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

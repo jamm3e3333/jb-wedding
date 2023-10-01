@@ -8,3 +8,9 @@
     flex-wrap: wrap;
     align-items: center;
 }
+
+@media only screen and (max-width: 500px) {
+    .invitee-form {
+        align-items: flex-start;
+    }
+}
