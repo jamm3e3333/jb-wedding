@@ -10,10 +10,9 @@ import { createInviteeRequest } from '../create-invitee.request';
 import { handlePhoneChangeEvent } from '../../../event-handler/on-phone-change-handler-with-set-state';
 import { handlePhoneBlurEvent } from '../../../event-handler/on-blur-phone-handler-with-set-state';
 import { handleEmailBlurEvent } from '../../../event-handler/on-blur-email-handler-with-set-state';
-import RoutingButton from '../../ui/router/routing-button';
 
 const setInitialStateForSetStateFns = (
-    ...args: ((fnArg: string) => void)[]
+    ...args: (<T extends ''>(initialState: T) => void)[]
 ) => {
     for (const arg of args) {
         arg('');
@@ -188,7 +187,6 @@ const InviteeForm: React.FC = () => {
             <InviteeField>
                 <TextAreaField
                     labelName={'Questions/Comments'}
-                    type="input"
                     onChange={onQuestionsCommentsChange}
                     name={'questions-comments'}
                     value={questionComments}

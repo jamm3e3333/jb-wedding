@@ -1,16 +1,12 @@
 import React, { ChangeEventHandler, FocusEventHandler, useState } from 'react';
 
-const useStateOnElementEventEmitHook = <T extends HTMLFormElement>(
+const useStateOnElementEventEmitHook = <THTMLElement extends HTMLInputElement>(
     onChangeEventHandler?: (
-        setStateFn: <TState extends string>(
-            value: ((prevState: TState) => TState) | TState
-        ) => void
-    ) => ChangeEventHandler<T>,
+        setStateFn: (value: React.SetStateAction<string>) => void
+    ) => ChangeEventHandler<THTMLElement>,
     isValidEventTargetValue?: (
-        setStateFn: <TState extends string | boolean>(
-            value: ((prevState: TState) => TState) | TState
-        ) => void
-    ) => FocusEventHandler<T>
+        setStateFn: (value: React.SetStateAction<boolean>) => void
+    ) => FocusEventHandler<THTMLElement>
 ) => {
     const [eventTargetValueState, setEventTargetValue] = useState('');
     const [eventTargetValueIsValid, setEventTargetValueIsValid] =
@@ -19,12 +15,12 @@ const useStateOnElementEventEmitHook = <T extends HTMLFormElement>(
     return {
         onChangeEventHandler: onChangeEventHandler
             ? onChangeEventHandler(setEventTargetValue)
-            : (event: React.ChangeEvent<T>) => {
+            : (event: React.ChangeEvent<THTMLElement>) => {
                   setEventTargetValue(event.target.value);
               },
         onBlurEventHandler: isValidEventTargetValue
             ? isValidEventTargetValue(setEventTargetValueIsValid)
-            : (event: React.FocusEvent<T>) => {
+            : (event: React.FocusEvent<THTMLElement>) => {
                   const valueTrimmed = event.target.value.trim();
                   setEventTargetValueIsValid(Boolean(valueTrimmed));
               },

@@ -1,7 +1,9 @@
-import {ChangeEvent, FocusEvent} from "react";
+import React from "react";
 
-export type EmitEventWithSetStateHandlerType = (
-  setState: <TState extends string>(
-    value: ((prevState: TState) => TState) | TState
+export type EmitEventWithSetStateHandlerType<TEventEmitType, TSetStateValue> = (
+  setState: (
+    value: React.SetStateAction<TSetStateValue>
   ) => void
-) => (e: ChangeEvent<HTMLFormElement> | FocusEvent<HTMLFormElement>) => void;
+) => (e: TEventEmitType) => void;
+
+
