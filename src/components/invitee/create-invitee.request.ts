@@ -1,5 +1,5 @@
 import axios from 'axios'
-const CREATE_INVITEE_URL = import.meta.env.VITE_CREATE_INVITEE_URL ?? ''
+const CREATE_INVITEE_URL = 'https://api-k4nbgqqtqq-uc.a.run.app/invitee'
 export interface CreateInviteeInterface {
   name: string;
   surname: string;
