@@ -1,18 +1,18 @@
 @import './colors';
 @import './variables';
 
-
 @mixin big-fancy-font($font-color) {
-  color: $font-color;
-  font-family: $font-fancy;
-  font-size: 7rem;
-  font-weight: 700;
-  letter-spacing: .7rem;
+    color: $font-color;
+    font-family: $font-fancy;
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: 0.7rem;
 }
 
-@mixin input-focus-active ($border-color, $box-shadow-effect) {
-    &:focus, &:active {
-        border: $border-color solid .05rem;
+@mixin input-focus-active($border-color, $box-shadow-effect) {
+    &:focus,
+    &:active {
+        border: $border-color solid 0.05rem;
         box-shadow: $box-shadow-effect;
     }
 }
@@ -21,84 +21,109 @@
     box-shadow: 0 2rem 2rem $shadow-black;
 }
 
-@mixin animation-moveInRight ($transition-time) {
+@mixin animation-moveInRight($transition-time) {
     animation: moveInRight $transition-time ease-out;
 }
 
-@mixin animation-moveInLeft ($transition-time) {
-  animation: moveInLeft $transition-time ease-out;
+@mixin animation-moveInLeft($transition-time) {
+    animation: moveInLeft $transition-time ease-out;
 }
 
-@mixin animation-moveFromBottom ($transition-time) {
-  animation: moveFromBottom $transition-time ease-out;
+@mixin animation-moveFromBottom($transition-time) {
+    animation: moveFromBottom $transition-time ease-out;
 }
 
-@mixin animation-moveFromTop ($transition-time) {
-  animation: moveFromTop $transition-time ease-out;
+@mixin animation-moveFromTop($transition-time) {
+    animation: moveFromTop $transition-time ease-out;
 }
 
-@mixin hover-changeColorWithTransition ($hover-color, $transition-time) {
-  &:hover {
-    color: $hover-color;
-    border-bottom: solid $hover-color .3rem;
-    transition: $transition-time;
-  }
+@mixin hover-changeColorWithTransition($hover-color, $transition-time) {
+    &:hover {
+        color: $hover-color;
+        border-bottom: solid $hover-color 0.3rem;
+        transition: $transition-time;
+    }
 }
 
-@mixin mobile-font-size () {
-  font-size: 1.9rem;
+@mixin mobile-font-size() {
+    font-size: 1.9rem;
+}
+
+@mixin input-form-field() {
+    font-size: $font-size-form;
+    padding: 1.2rem 3rem;
+    border: $pink-input-border solid 0.2rem;
+    border-radius: 0.3rem;
+}
+
+@mixin select-form-field() {
+    font-size: $font-size-form;
+    padding: 1.2rem 3rem;
+    border: none;
+    outline: none;
+    border-bottom: $pink-input-border solid 0.2rem;
+    border-radius: 0.3rem;
+}
+
+@mixin input-field-invalid() {
+    font-size: $font-size-invalid;
+    color: $pink-bright;
+    text-align: center;
+    margin: 0.4rem 0 0 0.5rem;
 }
 
 @keyframes moveInRight {
     0% {
-      transform: translateX(20rem);
-      opacity: 0;
+        transform: translateX(20rem);
+        opacity: 0;
     }
     80% {
-      transform: translateX(-1rem);
+        transform: translateX(-1rem);
     }
     100% {
-      opacity: 1;
-      transform: translateX(0); }
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes moveInLeft {
-  0% {
-    transform: translateX(-20rem);
-    opacity: 0;
-  }
-  80% {
-    transform: translateX(1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0); }
+    0% {
+        transform: translateX(-20rem);
+        opacity: 0;
+    }
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes moveFromBottom {
-  0% {
-    transform: translateY(20rem);
-    opacity: 0;
-  }
-  80% {
-      transform: translateY(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(20rem);
+        opacity: 0;
+    }
+    80% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes moveFromTop {
-  0% {
-    transform: translateY(-20rem);
-    opacity: 0;
-  }
-  80% {
-    transform: translateY(1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(-20rem);
+        opacity: 0;
+    }
+    80% {
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
