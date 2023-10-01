@@ -23,7 +23,7 @@ const InviteeHeader: React.FC = () => {
             <CoverWithImage
                 className={styles['header-image']}
                 image={{
-                    src: './img/running-on-beach.jpeg',
+                    src: './img/running-on-beach.webp',
                     linearGradient: imageGradient,
                 }}
             >
