@@ -1,11 +1,12 @@
 import React, { ChangeEventHandler, FocusEventHandler } from 'react';
 import styles from './input-field.module.scss';
+import InvalidFieldText from './invalid-field-text';
 
 const InputField: React.FC<{
     type: React.HTMLInputTypeAttribute;
     name: string;
+    labelName: string;
     isValid?: boolean;
-    labelName?: string;
     placeholder?: string;
     value?: string | boolean;
     onChange?: ChangeEventHandler;
@@ -34,10 +35,7 @@ const InputField: React.FC<{
                         onBlur={props.onBlur}
                     />
                     {!props.isValid && props.isValid !== undefined && (
-                        <span className={styles['input-form-invalid']}>
-                            <i className="fa fa-exclamation-circle"></i> Invalid{' '}
-                            {props.labelName}
-                        </span>
+                        <InvalidFieldText invalidTextName={props.labelName} />
                     )}
                 </>
             ) : (

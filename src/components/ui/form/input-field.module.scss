@@ -17,10 +17,6 @@
     input:checked {
         background-color: $pink-bright;
     }
-
-    &-invalid {
-        @include input-field-invalid();
-    }
 }
 
 .label-form {
