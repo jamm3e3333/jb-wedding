@@ -9,6 +9,7 @@ permissions:
 jobs:
   security:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - uses: actions/checkout@master
       - name: prdel
