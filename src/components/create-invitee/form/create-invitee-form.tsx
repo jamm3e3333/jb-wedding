@@ -149,8 +149,10 @@ const CreateInviteeForm: React.FC = () => {
                 error.response?.data.statusCode === 422
             ) {
                 setSubmittedFormStatus('validation-error');
+            } else {
+                setSubmittedFormStatus('error');
             }
-            setSubmittedFormStatus('error');
+
             setIsSubmittedMessageDisplayed(true);
             setIsSubmittedFormSuccessful(false);
         } finally {
