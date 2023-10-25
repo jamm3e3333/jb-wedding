@@ -1,0 +1,13 @@
+@import '../../../styles/colors';
+
+.radio-switch {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    color: $pink-bright-faded;
+}
+
+input[type='radio']:hover {
+    cursor: pointer;
+}

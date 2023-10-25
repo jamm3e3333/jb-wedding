@@ -1,0 +1,38 @@
+@import '../../../styles/colors';
+
+.submit-message {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 5rem 0 0;
+    border: $blue-info-border solid 0.1rem;
+    padding: 0 1rem;
+    text-align: left;
+    width: 50rem;
+    color: $blue-info-border;
+    background: $blue-info-bg;
+
+    &-successful {
+        color: $green-success;
+        background: $green-success-bg;
+        border: $green-success solid 0.1rem;
+    }
+
+    &-failed {
+        color: $error-red;
+        background: $error-red-bg;
+        border: $error-red solid 0.1rem;
+    }
+
+    &-warning {
+        color: $warning-yellow;
+        background: $warning-yellow-bg;
+        border: $warning-yellow solid 0.1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .submit-message {
+        width: 100%;
+    }
+}
