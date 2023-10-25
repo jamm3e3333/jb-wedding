@@ -8,45 +8,27 @@ const InputField: React.FC<{
     labelName: string;
     isValid?: boolean;
     placeholder?: string;
-    value?: string | boolean;
+    value: string;
     onChange?: ChangeEventHandler;
     onBlur?: FocusEventHandler;
     className?: string;
     required?: boolean;
 }> = (props) => {
     return (
-        <label
-            htmlFor={props.name}
-            className={`${styles['label-form']} ${
-                props.type === 'checkbox' ? styles['label-form--row'] : ''
-            }`}
-        >
+        <label htmlFor={props.name} className={styles['label-form']}>
             {props.labelName && props.labelName}
-            {typeof props.value === 'string' && 'value' in props ? (
-                <>
-                    <input
-                        className={`${styles['input-form']} ${props.className}`}
-                        type={props.type}
-                        onChange={props.onChange}
-                        name={props.name}
-                        placeholder={props.placeholder}
-                        required={props.required}
-                        value={props.value}
-                        onBlur={props.onBlur}
-                    />
-                    {!props.isValid && props.isValid !== undefined && (
-                        <InvalidFieldText invalidTextName={props.labelName} />
-                    )}
-                </>
-            ) : (
-                <input
-                    className={`${styles['input-form']} ${props.className}`}
-                    type={props.type}
-                    onChange={props.onChange}
-                    name={props.name}
-                    placeholder={props.placeholder}
-                    required={props.required}
-                />
+            <input
+                className={`${styles['input-form']} ${props.className}`}
+                type={props.type}
+                onChange={props.onChange}
+                name={props.name}
+                placeholder={props.placeholder}
+                required={props.required}
+                value={props.value}
+                onBlur={props.onBlur}
+            />
+            {!props.isValid && props.isValid !== undefined && (
+                <InvalidFieldText invalidTextName={props.labelName} />
             )}
         </label>
     );

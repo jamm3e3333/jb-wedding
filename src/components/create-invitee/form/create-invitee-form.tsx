@@ -5,11 +5,15 @@ import TextAreaField from '../../ui/form/text-area-field';
 import styles from './create-invitee.module.scss';
 import FormElement from '../../ui/form/form-element';
 import SubmitButton from '../../ui/form/submit-button';
-import useStateOnChangeCheckboxEventHook from '../../../hooks/use-state-on-change-checkbox-event.hook';
+import useStateOnSwitchRadioEventHook from '../../../hooks/use-state-on-switch-radio-event.hook';
 import { createInviteeRequest } from '../create-invitee.request';
 import { handleOnPhoneChangeEvent } from '../../ui/form/event-handler/handle-on-phone-change-with-set-state';
 import { handlePhoneBlurEvent } from '../../ui/form/event-handler/handle-on-blur-phone-with-set-state';
 import { handleEmailBlurEvent } from '../../ui/form/event-handler/handle-on-blur-email-with-set-state';
+import SubmitMessage from './submit-message';
+import { StatusType } from './type/status-type';
+import RadioYesNoInputField from '../../ui/form/radio-yes-no-input-field';
+import { AxiosError } from 'axios';
 
 const setInitialStateForSetStateFns = (
     ...args: (<T extends ''>(initialState: T) => void)[]
@@ -21,6 +25,12 @@ const setInitialStateForSetStateFns = (
 
 const CreateInviteeForm: React.FC = () => {
     const [isSubmitDisabled, setSubmitDisabled] = useState(false);
+    const [isSubmittedMessageDisplayed, setIsSubmittedMessageDisplayed] =
+        useState(false);
+    const [submittedFormStatus, setSubmittedFormStatus] =
+        useState<StatusType>('info');
+    const [isSubmittedFormSuccessful, setIsSubmittedFormSuccessful] =
+        useState(true);
 
     const {
         eventTargetValueState: name,
@@ -57,10 +67,8 @@ const CreateInviteeForm: React.FC = () => {
         handlePhoneBlurEvent
     );
 
-    const {
-        eventTargetValueState: isAttending,
-        onChangeEventHandler: onIsAttendingChange,
-    } = useStateOnChangeCheckboxEventHook();
+    const { eventTargetValueState: isAttending, handleSwitchRadioValue } =
+        useStateOnSwitchRadioEventHook();
 
     const {
         eventTargetValueState: questionComments,
@@ -85,15 +93,28 @@ const CreateInviteeForm: React.FC = () => {
     const handleSubmitInvitee = async (e: FormEvent) => {
         e.preventDefault();
         setSubmitDisabled(true);
-        setTimeout(() => setSubmitDisabled(false), 10_000);
+        setTimeout(() => setSubmitDisabled(false), 9_000);
 
         if (
-            !isNameValid &&
-            !isPhoneValid &&
-            !isSurnameValid &&
-            !isEmailValid &&
-            !isDescriptionValid
+            !isNameValid ||
+            !isPhoneValid ||
+            !isSurnameValid ||
+            !isEmailValid ||
+            !isDescriptionValid ||
+            !name ||
+            !surname ||
+            !email ||
+            !phone ||
+            !inviteeDescription
         ) {
+            setSubmittedFormStatus('warning');
+            setIsSubmittedMessageDisplayed(true);
+
+            setTimeout(() => {
+                setIsSubmittedMessageDisplayed(false);
+                setSubmittedFormStatus('info');
+                setIsSubmittedFormSuccessful(true);
+            }, 7_000);
             return;
         }
 
@@ -119,10 +140,28 @@ const CreateInviteeForm: React.FC = () => {
                 setInitialQuestionsAndComments,
                 setInitialFoodAllergies
             );
+            setIsSubmittedFormSuccessful(true);
+            setIsSubmittedMessageDisplayed(true);
+            setSubmittedFormStatus('success');
         } catch (error) {
-            console.log(error);
+            if (
+                error instanceof AxiosError &&
+                error.response?.data.statusCode === 422
+            ) {
+                setSubmittedFormStatus('validation-error');
+            }
+            setSubmittedFormStatus('error');
+            setIsSubmittedMessageDisplayed(true);
+            setIsSubmittedFormSuccessful(false);
+        } finally {
+            setTimeout(() => {
+                setIsSubmittedMessageDisplayed(false);
+                setSubmittedFormStatus('info');
+                setIsSubmittedFormSuccessful(true);
+            }, 7_000);
         }
     };
+
     return (
         <form className={styles['invitee-form']} onSubmit={handleSubmitInvitee}>
             <FormElement>
@@ -170,11 +209,10 @@ const CreateInviteeForm: React.FC = () => {
                 />
             </FormElement>
             <FormElement>
-                <InputField
-                    labelName={"Check if you're attending"}
-                    type="checkbox"
-                    onChange={onIsAttendingChange}
-                    name={'is-attending'}
+                <RadioYesNoInputField
+                    labelName="Are you attending the wedding?"
+                    name="is-attending"
+                    onSwitchRadioCb={handleSwitchRadioValue}
                 />
             </FormElement>
             <FormElement>
@@ -204,6 +242,11 @@ const CreateInviteeForm: React.FC = () => {
                     placeholder={'Can I bring any plátanos?'}
                 />
             </FormElement>
+            <SubmitMessage
+                isDisplayed={isSubmittedMessageDisplayed}
+                isSuccessful={isSubmittedFormSuccessful}
+                status={submittedFormStatus}
+            />
             <SubmitButton
                 buttonValue={'Submit'}
                 name={'submit-invitee'}

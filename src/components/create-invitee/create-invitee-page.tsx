@@ -1,6 +1,6 @@
 import React from 'react';
 import CreateInviteeForm from './form/create-invitee-form';
-import CoverBoxImage from './header/cover-box-image';
+import CoverBoxImage from './cover/cover-box-image';
 
 const CreateInviteePage: React.FC = () => {
     return (

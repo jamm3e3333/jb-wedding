@@ -28,7 +28,7 @@ const TextAreaField: React.FC<{
                 onBlur={props.onBlur}
             ></textarea>
             {!props.isValid && props.isValid !== undefined && (
-                <InvalidFieldText invalidTextName="empty field" />
+                <InvalidFieldText invalidTextName="field" />
             )}
         </label>
     );

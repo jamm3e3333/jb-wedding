@@ -11,11 +11,6 @@
     justify-content: center;
 }
 
-.label-form--row {
-    flex-direction: row;
-    align-items: center;
-}
-
 .input-form {
     outline: none;
     font-size: $font-size-form;
@@ -26,10 +21,6 @@
     color: $pink-bright;
     &::placeholder {
         color: $pink-bright-placeholder;
-    }
-
-    input:checked {
-        background-color: $pink-bright;
     }
 }
 
