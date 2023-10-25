@@ -11,10 +11,9 @@ import { handleOnPhoneChangeEvent } from '../../ui/form/event-handler/handle-on-
 import { handlePhoneBlurEvent } from '../../ui/form/event-handler/handle-on-blur-phone-with-set-state';
 import { handleEmailBlurEvent } from '../../ui/form/event-handler/handle-on-blur-email-with-set-state';
 import SubmitMessage from './submit-message';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { AxiosError } from 'axios';
 import { StatusType } from './type/status-type';
 import RadioYesNoInputField from '../../ui/form/radio-yes-no-input-field';
+import { AxiosError } from 'axios';
 
 const setInitialStateForSetStateFns = (
     ...args: (<T extends ''>(initialState: T) => void)[]
@@ -69,7 +68,7 @@ const CreateInviteeForm: React.FC = () => {
     );
 
     const { eventTargetValueState: isAttending, handleSwitchRadioValue } =
-        useStateOnSwitchRadioEventHook<boolean>();
+        useStateOnSwitchRadioEventHook();
 
     const {
         eventTargetValueState: questionComments,
@@ -120,17 +119,6 @@ const CreateInviteeForm: React.FC = () => {
         }
 
         try {
-            console.log({
-                email,
-                name,
-                surname,
-                phone,
-                isAttending,
-                ...(inviteeDescription && {
-                    personDescription: inviteeDescription,
-                }),
-                ...(foodAllergies && { foodRestriction: foodAllergies }),
-            });
             await createInviteeRequest({
                 email,
                 name,
@@ -155,8 +143,11 @@ const CreateInviteeForm: React.FC = () => {
             setIsSubmittedFormSuccessful(true);
             setIsSubmittedMessageDisplayed(true);
             setSubmittedFormStatus('success');
-        } catch (error: AxiosError) {
-            if (error.response?.data.statusCode === 422) {
+        } catch (error) {
+            if (
+                error instanceof AxiosError &&
+                error.response?.data.statusCode === 422
+            ) {
                 setSubmittedFormStatus('validation-error');
             }
             setSubmittedFormStatus('error');
