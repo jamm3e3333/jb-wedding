@@ -118,8 +118,9 @@ const CreateInviteeForm: React.FC = () => {
             return;
         }
 
+        let response;
         try {
-            await createInviteeRequest({
+            response = await createInviteeRequest({
                 email,
                 name,
                 surname,
@@ -144,12 +145,17 @@ const CreateInviteeForm: React.FC = () => {
             setIsSubmittedMessageDisplayed(true);
             setSubmittedFormStatus('success');
         } catch (error) {
+            console.log('error', error);
+            console.log('response', response);
+            console.log(error instanceof AxiosError);
             if (
                 error instanceof AxiosError &&
                 error.response?.data.statusCode === 422
             ) {
+                console.log("i'm here");
                 setSubmittedFormStatus('validation-error');
             } else {
+                console.log("i'm here");
                 setSubmittedFormStatus('error');
             }
 
