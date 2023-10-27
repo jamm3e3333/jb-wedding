@@ -14,6 +14,7 @@ import SubmitMessage from './submit-message';
 import { StatusType } from './type/status-type';
 import RadioYesNoInputField from '../../ui/form/radio-yes-no-input-field';
 import { AxiosError } from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const setInitialStateForSetStateFns = (
     ...args: (<T extends ''>(initialState: T) => void)[]
@@ -31,6 +32,7 @@ const CreateInviteeForm: React.FC = () => {
         useState<StatusType>('info');
     const [isSubmittedFormSuccessful, setIsSubmittedFormSuccessful] =
         useState(true);
+    const { t } = useTranslation();
 
     const {
         eventTargetValueState: name,
@@ -168,80 +170,94 @@ const CreateInviteeForm: React.FC = () => {
         <form className={styles['invitee-form']} onSubmit={handleSubmitInvitee}>
             <FormElement>
                 <InputField
-                    labelName={'Name'}
+                    name={t('form.name.name' as never) as string}
                     type="text"
                     onChange={onNameChange}
-                    name={'invitee-name'}
+                    labelName={'invitee-name'}
                     value={name}
-                    placeholder={'Juan'}
+                    placeholder={t('form.name.placeholder' as never) as string}
                     onBlur={onNameBlur}
                     isValid={isNameValid}
                 />
                 <InputField
-                    labelName={'Surname'}
+                    name={t('form.surname.name' as never) as string}
                     type="text"
                     onChange={onSurnameChange}
-                    name={'invitee-name'}
+                    labelName={'invitee-name'}
                     value={surname}
-                    placeholder={'Pablo'}
+                    placeholder={
+                        t('form.surname.placeholder' as never) as string
+                    }
                     onBlur={onSurnameBlur}
                     isValid={isSurnameValid}
                 />
             </FormElement>
             <FormElement>
                 <InputField
-                    labelName={'Phone Number'}
+                    name={t('form.phoneNumber.name' as never) as string}
                     type="tel"
                     onChange={onPhoneChange}
-                    name={'phone'}
+                    labelName={'phone'}
                     value={phone}
-                    placeholder={'+1 (809) 859-6555'}
+                    placeholder={
+                        t('form.phoneNumber.placeholder' as never) as string
+                    }
                     onBlur={onPhoneBlur}
                     isValid={isPhoneValid}
                 />
                 <InputField
-                    labelName={'Email'}
+                    name={t('form.email.name' as never) as string}
                     type="email"
                     onChange={onEmailChange}
-                    name={'email'}
+                    labelName={'email'}
                     value={email}
-                    placeholder={'juan@pablo.do'}
+                    placeholder={t('form.email.placeholder' as never) as string}
                     onBlur={onEmailBlur}
                     isValid={isEmailValid}
                 />
             </FormElement>
             <FormElement>
                 <RadioYesNoInputField
-                    labelName="Are you attending the wedding?"
-                    name="is-attending"
+                    name={t('form.isAttending.name' as never) as string}
+                    labelName={'is-attending'}
                     onSwitchRadioCb={handleSwitchRadioValue}
                 />
             </FormElement>
             <FormElement>
                 <TextAreaField
-                    labelName={'Tell us something about you'}
-                    name="invitee-description"
-                    placeholder={'I like eating plátanos'}
+                    name={t('form.personDetail.name' as never) as string}
+                    labelName="invitee-description"
+                    placeholder={
+                        t('form.personDetail.placeholder' as never) as string
+                    }
                     onChange={onInviteeDescriptionChange}
                     value={inviteeDescription}
                     onBlur={onInviteeDescriptionBlur}
                     isValid={isDescriptionValid}
                 />
                 <TextAreaField
-                    labelName={'Food allergies'}
-                    name="invitee-description"
-                    placeholder={'Broccoli'}
+                    name={t('form.foodAllergies.name' as never) as string}
+                    labelName="invitee-description"
+                    placeholder={
+                        t('form.foodAllergies.placeholder' as never) as string
+                    }
                     onChange={onFoodAllergiesChange}
                     value={foodAllergies}
                 />
             </FormElement>
             <FormElement>
                 <TextAreaField
-                    labelName={'Questions/Comments'}
+                    name={
+                        t('form.questionsAndComments.name' as never) as string
+                    }
                     onChange={onQuestionsCommentsChange}
-                    name={'questions-comments'}
+                    labelName={'questions-comments'}
                     value={questionComments}
-                    placeholder={'Can I bring any plátanos?'}
+                    placeholder={
+                        t(
+                            'form.questionsAndComments.placeholder' as never
+                        ) as string
+                    }
                 />
             </FormElement>
             <SubmitMessage
@@ -250,7 +266,7 @@ const CreateInviteeForm: React.FC = () => {
                 status={submittedFormStatus}
             />
             <SubmitButton
-                buttonValue={'Submit'}
+                buttonValue={t('form.submit' as never) as string}
                 name={'submit-invitee'}
                 disabled={isSubmitDisabled}
             />

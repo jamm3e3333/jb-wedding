@@ -3,11 +3,11 @@ import styles from './text-area-field.module.scss';
 import InvalidFieldText from './invalid-field-text';
 
 const TextAreaField: React.FC<{
-    name: string;
+    labelName: string;
     placeholder: string;
     onChange: ChangeEventHandler;
     value: string;
-    labelName: string;
+    name: string;
     className?: string;
     cols?: number;
     rows?: number;
@@ -15,11 +15,11 @@ const TextAreaField: React.FC<{
     onBlur?: FocusEventHandler;
 }> = (props) => {
     return (
-        <label htmlFor={props.name} className={styles['label-form']}>
-            {props.labelName && props.labelName}
+        <label htmlFor={props.labelName} className={styles['label-form']}>
+            {props.name && props.name}
             <textarea
                 className={`${props.className} ${styles['textarea-form']}`}
-                name={props.name}
+                name={props.labelName}
                 placeholder={props.placeholder}
                 cols={Number(props.cols ?? 30)}
                 rows={Number(props.rows ?? 10)}
@@ -28,7 +28,7 @@ const TextAreaField: React.FC<{
                 onBlur={props.onBlur}
             ></textarea>
             {!props.isValid && props.isValid !== undefined && (
-                <InvalidFieldText invalidTextName="field" />
+                <InvalidFieldText invalidTextName={props.name} />
             )}
         </label>
     );

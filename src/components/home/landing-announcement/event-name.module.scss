@@ -1,19 +1,19 @@
-@import '../../styles/colors';
-@import '../../styles/variables';
+@import '../../../styles/colors';
+@import '../../../styles/variables';
 
 .event-name {
-  background: $white-pale;
-  color: $pink-bright;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: .6rem;
-  margin: 1rem auto 0;
-  text-align: center;
-  letter-spacing: .8rem;
+    background: $white-pale;
+    color: $pink-bright;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.6rem;
+    margin: 1rem auto 0;
+    text-align: center;
+    letter-spacing: 0.8rem;
 }
 
 @media only screen and (max-width: 600px) {
-  .event-name {
-    font-size: $font-size-para-mobile;
-  }
+    .event-name {
+        font-size: $font-size-para-mobile;
+    }
 }

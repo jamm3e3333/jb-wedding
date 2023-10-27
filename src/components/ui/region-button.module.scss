@@ -1,0 +1,48 @@
+@import '../../styles/colors';
+
+.region {
+    z-index: 10;
+    padding: 0.5rem 2rem;
+    margin: 0;
+    position: relative;
+    border-bottom: 0.005rem white solid;
+    &:hover {
+        color: gray;
+    }
+
+    &-last {
+        border-bottom: none;
+    }
+
+    &-box {
+        padding: 0;
+        color: $white;
+        background: $pink-bright-faded;
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &-icon {
+        width: 2rem;
+        margin: 0 auto;
+        &:hover {
+            color: gray;
+        }
+    }
+
+    &-collapsed {
+        display: flex;
+        flex-direction: row;
+        padding: 0 1rem;
+        justify-content: space-evenly;
+        gap: 0.5rem;
+        margin: 1.7rem auto;
+        &:hover {
+            color: gray;
+        }
+    }
+}
