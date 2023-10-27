@@ -62,7 +62,7 @@
       "error": "Error al enviar el formulario del invitado. Inténtalo de nuevo más tarde, por favor.",
       "warning": "Puede que hayas olvidado completar algunos campos o que algunos campos sean inválidos. Por favor, verifica todos los campos y llena el formulario de nuevo."
     },
-    "invalid": "por favor, rellena correctamente"
+    "invalid": "rellena correctamente"
   }
 }
 
