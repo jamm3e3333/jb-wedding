@@ -4,8 +4,8 @@ import InvalidFieldText from './invalid-field-text';
 
 const InputField: React.FC<{
     type: React.HTMLInputTypeAttribute;
-    name: string;
     labelName: string;
+    name: string;
     isValid?: boolean;
     placeholder?: string;
     value: string;
@@ -15,20 +15,20 @@ const InputField: React.FC<{
     required?: boolean;
 }> = (props) => {
     return (
-        <label htmlFor={props.name} className={styles['label-form']}>
-            {props.labelName && props.labelName}
+        <label htmlFor={props.labelName} className={styles['label-form']}>
+            {props.name && props.name}
             <input
                 className={`${styles['input-form']} ${props.className}`}
                 type={props.type}
                 onChange={props.onChange}
-                name={props.name}
+                name={props.labelName}
                 placeholder={props.placeholder}
                 required={props.required}
                 value={props.value}
                 onBlur={props.onBlur}
             />
             {!props.isValid && props.isValid !== undefined && (
-                <InvalidFieldText invalidTextName={props.labelName} />
+                <InvalidFieldText invalidTextName={props.name} />
             )}
         </label>
     );

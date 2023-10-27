@@ -6,6 +6,7 @@ import CoverWithImage, {
 import Rsvp from './rsvp';
 import FillFormText from './fill-form-text';
 import RoutingButton from '../../ui/router/routing-button';
+import { useTranslation } from 'react-i18next';
 
 const GRADIENT_DIRECTION = 'to right';
 const GRADIENT_FROM_COLOR = 'rgba(200, 148, 186, 0.2)';
@@ -18,6 +19,7 @@ const imageGradient: ImageGradientInterface = {
 };
 
 const CoverBoxImage: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <>
             <CoverWithImage
@@ -27,7 +29,7 @@ const CoverBoxImage: React.FC = () => {
                     linearGradient: imageGradient,
                 }}
             >
-                <RoutingButton name="Home" path="/" />
+                <RoutingButton name={t('home' as never) as string} path="/" />
                 <Rsvp />
                 <FillFormText />
             </CoverWithImage>

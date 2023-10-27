@@ -1,0 +1,68 @@
+{
+  "header": {
+    "rsvp": "Invitación",
+    "language": {
+      "en": "Inglés",
+      "es": "Español",
+      "cs": "Checo"
+    }
+  },
+  "landing": "Se casan",
+  "saveTheDate": {
+    "name": "Guarda la fecha",
+    "date": "14 de abril 2024"
+  },
+  "ceremony": {
+    "name": "Ceremonia & Recepción",
+    "place": "República Dominicana"
+  },
+  "home": "Inicio",
+  "rsvp": {
+    "name": "Presencía",
+    "fillForm": "Porfis, llena este formulario para confirmar tu asistencia."
+  },
+  "form": {
+    "name": {
+      "name": "Coloca tu nombre",
+      "placeholder": ""
+    },
+    "surname": {
+      "name": "Coloca tu apellido",
+      "placeholder": ""
+    },
+    "phoneNumber": {
+      "name": "Coloca tu número de teléfono",
+      "placeholder": ""
+    },
+    "email": {
+      "name": "Coloca tu correo electrónico ",
+      "placeholder": ""
+    },
+    "isAttending": {
+      "name": "¿Vas a estar con nosotros en esta celebración?",
+      "yes": "Sí",
+      "no": "No"
+    },
+    "personDetail": {
+      "name": "Dinos algo de ti.",
+      "placeholder": "A mí me gusta bailar."
+    },
+    "foodAllergies": {
+      "name": "¿Tienes alguna alergia o restricción alimentaria?",
+      "placeholder": "Zanahoria"
+    },
+    "questionsAndComments": {
+      "name": "¿Tienes alguna pregunta para nosotros? ",
+      "placeholder": "¿Puedo traer plátanos?"
+    },
+    "submit": "Enviar",
+    "submittedMessage": {
+      "success": "esta invitación es válida para UNA (1) sola persona, a menos de que la novia o novio te haya especificado que puedes llevar a otra persona más. En caso de que sea así, por favor vuelve a llenar el formulario con el nombre de tu acompañante para tenerlo pendiente en la lista.",
+      "validationError": "Puede que ya hayas llenado el formulario con un número o correo electrónico previamente utilizado. Por favor, intenta de nuevo.",
+      "error": "Error al enviar el formulario del invitado. Inténtalo de nuevo más tarde, por favor.",
+      "warning": "Puede que hayas olvidado completar algunos campos o que algunos campos sean inválidos. Por favor, verifica todos los campos y llena el formulario de nuevo."
+    },
+    "invalid": "por favor, rellena correctamente"
+  }
+}
+
