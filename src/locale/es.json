@@ -18,24 +18,24 @@
   },
   "home": "Inicio",
   "rsvp": {
-    "name": "Presencía",
+    "name": "Invitación",
     "fillForm": "Porfis, llena este formulario para confirmar tu asistencia."
   },
   "form": {
     "name": {
-      "name": "Coloca tu nombre",
+      "name": "Nombre",
       "placeholder": ""
     },
     "surname": {
-      "name": "Coloca tu apellido",
+      "name": "Apellido",
       "placeholder": ""
     },
     "phoneNumber": {
-      "name": "Coloca tu número de teléfono",
+      "name": "Número de teléfono",
       "placeholder": ""
     },
     "email": {
-      "name": "Coloca tu correo electrónico ",
+      "name": "Correo electrónico ",
       "placeholder": ""
     },
     "isAttending": {

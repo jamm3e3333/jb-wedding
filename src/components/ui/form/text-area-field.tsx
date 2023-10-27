@@ -21,7 +21,7 @@ const TextAreaField: React.FC<{
                 className={`${props.className} ${styles['textarea-form']}`}
                 name={props.labelName}
                 placeholder={props.placeholder}
-                cols={Number(props.cols ?? 30)}
+                cols={Number(props.cols ?? 25)}
                 rows={Number(props.rows ?? 10)}
                 onChange={props.onChange}
                 value={props.value}

@@ -162,7 +162,7 @@ const CreateInviteeForm: React.FC = () => {
                 setIsSubmittedMessageDisplayed(false);
                 setSubmittedFormStatus('info');
                 setIsSubmittedFormSuccessful(true);
-            }, 7_000);
+            }, 12_000);
         }
     };
 
