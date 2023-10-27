@@ -1,0 +1,68 @@
+{
+  "header": {
+    "rsvp": "RSVP",
+    "language": {
+      "en": "English",
+      "es": "Spanish",
+      "cs": "Czech"
+    }
+  },
+  "landing": "are getting married",
+  "saveTheDate": {
+    "name": "Save the date",
+    "date": "April 14 2024"
+  },
+  "ceremony": {
+    "name": "Ceremony & Reception",
+    "place": "Dominican Republic"
+  },
+  "home": "Home",
+  "rsvp": {
+    "name": "R.S.V.P.",
+    "fillForm": "Please fill out the form bellow"
+  },
+  "form": {
+    "name": {
+      "name": "Name",
+      "placeholder": "John"
+    },
+    "surname": {
+      "name": "Surname",
+      "placeholder": "Doe"
+    },
+    "phoneNumber": {
+      "name": "Phone Number",
+      "placeholder": "+1 (555) 555-1234"
+    },
+    "email": {
+      "name": "Email",
+      "placeholder": "john@doe.com"
+    },
+    "isAttending": {
+      "name": "Are you attending the wedding?",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "personDetail": {
+      "name": "Tell us something about you",
+      "placeholder": "I like eating plátanos"
+    },
+    "foodAllergies": {
+      "name": "Food allergies",
+      "placeholder": "Broccoli"
+    },
+    "questionsAndComments": {
+      "name": "Question/Comments",
+      "placeholder": "Can I bring any plátanos"
+    },
+    "submit": "Submit",
+    "submittedMessage": {
+      "success": "Pokuď máš od ženicha, nebo od nevěsty svolení pozvat +1 člověka, vyplň pozvánku ještě jednou s údaji +1 osoby.",
+      "validationError": "Vypadá to, že telefon, nebo email už byli použity, použij jiné číslo, nebo email a vyplň pozvánku znovu.",
+      "error": "Osudová chyba, vypadá to, že něco nefuguje. Zkus vyplnit pozvánku později.",
+      "warning": "Ajejda, něco si asi zapomněl vyplnit. Prosím vyplň formulář se všemi povinnými údaji."
+    },
+    "invalid": "please, fill correctly"
+  }
+}
+

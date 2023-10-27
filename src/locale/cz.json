@@ -1,0 +1,68 @@
+{
+  "header": {
+    "rsvp": "Potvrď účast",
+    "language": {
+      "en": "Anglicky",
+      "es": "Španělsky",
+      "cs": "Česky"
+    }
+  },
+  "landing": "se budou brát",
+  "saveTheDate": {
+    "name": "Datum svatby",
+    "date": "14 duben 2024"
+  },
+  "ceremony": {
+    "name": "Místo & čas konání",
+    "place": "Dominikánská republika"
+  },
+  "home": "Domů",
+  "rsvp": {
+    "name": "Účast",
+    "fillForm": "Pro potvrzení účasti vyplň formulář"
+  },
+  "form": {
+    "name": {
+      "name": "Jméno",
+      "placeholder": "Karel"
+    },
+    "surname": {
+      "name": "Příjmení",
+      "placeholder": "Vomáčka"
+    },
+    "phoneNumber": {
+      "name": "Telefonní číslo",
+      "placeholder": "+420 653 999 901"
+    },
+    "email": {
+      "name": "Email",
+      "placeholder": "karel@vomacka.cz"
+    },
+    "isAttending": {
+      "name": "Přijedeš na svatbu?",
+      "yes": "Ano",
+      "no": "Ne"
+    },
+    "personDetail": {
+      "name": "Řekni nám něco o sobě",
+      "placeholder": "Mám rad chleba"
+    },
+    "foodAllergies": {
+      "name": "Alergie na jídlo",
+      "placeholder": "Petržel"
+    },
+    "questionsAndComments": {
+      "name": "Otázky/Komentáře",
+      "placeholder": "Můžu si vzít s sebou chleba?"
+    },
+    "submit": "Odeslat",
+    "submittedMessage": {
+      "success": "Pokuď máš od ženicha, nebo od nevěsty svolení pozvat +1 člověka, vyplň pozvánku ještě jednou s údaji +1 osoby.",
+      "validationError": "Vypadá to, že telefon, nebo email už byli použity, použij jiné číslo, nebo email a vyplň pozvánku znovu.",
+      "error": "Osudová chyba, vypadá to, že něco nefuguje. Zkus vyplnit pozvánku později.",
+      "warning": "Ajejda, něco jsi asi zapomněl vyplnit. Prosím vyplň formulář se všemi povinnými údaji."
+    },
+    "invalid": "vyplň správně"
+  }
+}
+
