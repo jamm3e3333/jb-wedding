@@ -1,6 +1,8 @@
 import React from 'react';
 
-const RegionIcon: React.FC<{ className }> = ({ className }) => {
+const RegionIcon: React.FC<{ className?: string | undefined }> = ({
+    className,
+}) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

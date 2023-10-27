@@ -1,6 +1,5 @@
 import styles from './submit-message.module.scss';
 import React, { ReactNode } from 'react';
-import getMessageForStatus from './mapper/status-to-message.mapper';
 import getSubmitStyleForStatus from './mapper/status-to-submit-style.mapper';
 import getIconForStatus from './mapper/status-to-icon.mapper';
 import { StatusType } from './type/status-type';
