@@ -12,6 +12,9 @@ const ReceptionText: React.FC = () => {
             <p className={styles['reception--place']}>
                 {t('ceremony.place' as never)}
             </p>
+            <p className={styles['reception--attention']}>
+                {t('ceremony.watchWebsite' as never)}
+            </p>
         </div>
     );
 };
