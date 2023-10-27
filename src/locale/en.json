@@ -14,12 +14,13 @@
   },
   "ceremony": {
     "name": "Ceremony & Reception",
-    "place": "Dominican Republic"
+    "place": "Dominican Republic",
+    "watchWebsite": "For more information watch the website."
   },
   "home": "Home",
   "rsvp": {
     "name": "R.S.V.P.",
-    "fillForm": "Please fill out the form bellow"
+    "fillForm": "Please fill out the form bellow."
   },
   "form": {
     "name": {

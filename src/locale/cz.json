@@ -14,12 +14,13 @@
   },
   "ceremony": {
     "name": "Místo & čas konání",
-    "place": "Dominikánská republika"
+    "place": "Dominikánská republika",
+    "watchWebsite": "Sleduj stránku pro další info."
   },
   "home": "Domů",
   "rsvp": {
     "name": "Účast",
-    "fillForm": "Pro potvrzení účasti vyplň formulář"
+    "fillForm": "Pro potvrzení účasti vyplň formulář."
   },
   "form": {
     "name": {
