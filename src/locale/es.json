@@ -48,11 +48,11 @@
       "placeholder": "A mí me gusta bailar."
     },
     "foodAllergies": {
-      "name": "¿Tienes alguna alergia o restricción alimentaria?",
+      "name": "¿Tienes alguna restricción alimentaria?",
       "placeholder": "Zanahoria"
     },
     "questionsAndComments": {
-      "name": "¿Tienes alguna pregunta para nosotros? ",
+      "name": "¿Tienes alguna pregunta? ",
       "placeholder": "¿Puedo traer plátanos?"
     },
     "submit": "Enviar",
