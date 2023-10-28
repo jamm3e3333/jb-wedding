@@ -5,12 +5,13 @@
     //margin: 1rem auto;
     outline: none;
     font-size: $font-size-form;
-    padding: 1.2rem 3rem;
+    padding: 1.2rem;
     border: $pink-input-border solid 0.2rem;
     border-radius: 0.3rem;
     font-family: 'Source Sans Pro', sans-serif;
     color: $pink-bright;
     resize: vertical;
+    width: 20em;
 
     &::placeholder {
         color: $pink-bright-placeholder;
@@ -23,4 +24,10 @@
     flex-direction: column;
     align-items: flex-start;
     color: $shadow-black;
+}
+
+@media only screen and (max-width: 380px) {
+    .textarea-form {
+        width: 15em;
+    }
 }
