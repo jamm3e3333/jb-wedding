@@ -32,7 +32,9 @@ const RegionButton: React.FC = () => {
             {!isCollapsed && (
                 <>
                     <span onClick={handleCollapseRegions}>
-                        <ArrowUp className={styles['region-icon']} />
+                        <ArrowUp
+                            className={`${styles['region-icon']} ${styles['region-icon--up']}`}
+                        />
                     </span>
                     <p
                         className={styles.region}

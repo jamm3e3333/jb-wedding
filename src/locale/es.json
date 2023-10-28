@@ -25,19 +25,19 @@
   "form": {
     "name": {
       "name": "Nombre",
-      "placeholder": ""
+      "placeholder": "Juan"
     },
     "surname": {
       "name": "Apellido",
-      "placeholder": ""
+      "placeholder": "Peña"
     },
     "phoneNumber": {
       "name": "Número de teléfono",
-      "placeholder": ""
+      "placeholder": "+1 (809) 686-5700"
     },
     "email": {
       "name": "Correo electrónico ",
-      "placeholder": ""
+      "placeholder": "juan@pena.do"
     },
     "isAttending": {
       "name": "¿Vas a estar con nosotros en esta celebración?",

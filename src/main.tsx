@@ -8,22 +8,6 @@ import CreateInviteePage from './components/create-invitee/create-invitee-page';
 import Home from './components/home/home';
 
 const router = createBrowserRouter([
-    // {
-    //     path: '/',
-    //     element: (
-    //         <App>
-    //             <Home />
-    //         </App>
-    //     ),
-    // },
-    // {
-    //     path: '/invitee',
-    //     element: (
-    //         <App>
-    //             <CreateInviteePage />
-    //         </App>
-    //     ),
-    // },
     {
         path: '/',
         element: <App />,
