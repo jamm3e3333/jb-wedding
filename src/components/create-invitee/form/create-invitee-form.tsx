@@ -170,7 +170,7 @@ const CreateInviteeForm: React.FC = () => {
         <form className={styles['invitee-form']} onSubmit={handleSubmitInvitee}>
             <FormElement>
                 <InputField
-                    name={t('form.name.name' as never) as string}
+                    name={`* ${t('form.name.name' as never) as string}`}
                     type="text"
                     onChange={onNameChange}
                     labelName={'invitee-name'}
@@ -180,7 +180,7 @@ const CreateInviteeForm: React.FC = () => {
                     isValid={isNameValid}
                 />
                 <InputField
-                    name={t('form.surname.name' as never) as string}
+                    name={`* ${t('form.surname.name' as never) as string}`}
                     type="text"
                     onChange={onSurnameChange}
                     labelName={'invitee-name'}
@@ -194,7 +194,7 @@ const CreateInviteeForm: React.FC = () => {
             </FormElement>
             <FormElement>
                 <InputField
-                    name={t('form.phoneNumber.name' as never) as string}
+                    name={`* ${t('form.phoneNumber.name' as never) as string}`}
                     type="tel"
                     onChange={onPhoneChange}
                     labelName={'phone'}
@@ -206,7 +206,7 @@ const CreateInviteeForm: React.FC = () => {
                     isValid={isPhoneValid}
                 />
                 <InputField
-                    name={t('form.email.name' as never) as string}
+                    name={`* ${t('form.email.name' as never) as string}`}
                     type="email"
                     onChange={onEmailChange}
                     labelName={'email'}
@@ -225,7 +225,7 @@ const CreateInviteeForm: React.FC = () => {
             </FormElement>
             <FormElement>
                 <TextAreaField
-                    name={t('form.personDetail.name' as never) as string}
+                    name={`* ${t('form.personDetail.name' as never) as string}`}
                     labelName="invitee-description"
                     placeholder={
                         t('form.personDetail.placeholder' as never) as string
