@@ -58,10 +58,10 @@
     },
     "submit": "Submit",
     "submittedMessage": {
-      "success": "Pokuď máš od ženicha, nebo od nevěsty svolení pozvat +1 člověka, vyplň pozvánku ještě jednou s údaji +1 osoby.",
-      "validationError": "Vypadá to, že telefon, nebo email už byli použity, použij jiné číslo, nebo email a vyplň pozvánku znovu.",
-      "error": "Osudová chyba, vypadá to, že něco nefuguje. Zkus vyplnit pozvánku později.",
-      "warning": "Ajejda, něco si asi zapomněl vyplnit. Prosím vyplň formulář se všemi povinnými údaji."
+      "success": "Successfully submit the invitation. If the groom of the bride said you can invite +1 person, fill in the invitation once again for the +1.",
+      "validationError": "It seems that the phone number or the email has been used. Use a different phone number or email and fill in the invitation again.",
+      "error": "Fatal error. It looks like something doesn't work. Try to fill in the invitation again later.",
+      "warning": "Ouch! It looks like you forgot to fill something. Fill all the necessary columns and submit the invitation again."
     },
     "invalid": "fill correctly"
   }
