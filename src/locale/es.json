@@ -59,7 +59,7 @@
     "submit": "Enviar",
     "submittedMessage": {
       "success": "Esta invitación es válida para UNA (1) sola persona, a menos de que la novia o novio te haya especificado que puedes llevar a otra persona más. En caso de que sea así, por favor vuelve a llenar el formulario con el nombre de tu acompañante para tenerlo pendiente en la lista.",
-      "validationError": "Puede que ya hayas llenado el formulario con un número o correo electrónico previamente utilizado. Por favor, intenta de nuevo.",
+      "validation-error": "Puede que ya hayas llenado el formulario con un número o correo electrónico previamente utilizado. Por favor, intenta de nuevo.",
       "error": "Error al enviar el formulario del invitado. Inténtalo de nuevo más tarde, por favor.",
       "warning": "Puede que hayas olvidado completar algunos campos o que algunos campos sean inválidos. Por favor, verifica todos los campos y llena el formulario de nuevo."
     },
