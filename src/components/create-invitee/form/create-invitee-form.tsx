@@ -131,6 +131,9 @@ const CreateInviteeForm: React.FC = () => {
                     personDescription: inviteeDescription,
                 }),
                 ...(foodAllergies && { foodRestriction: foodAllergies }),
+                ...(questionComments && {
+                    questionOrComment: questionComments,
+                }),
             });
 
             setInitialStateForSetStateFns(
