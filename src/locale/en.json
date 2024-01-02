@@ -64,6 +64,9 @@
       "warning": "Ouch! It looks like you forgot to fill something. Fill all the necessary columns and submit the invitation again."
     },
     "invalid": "fill correctly"
+  },
+  "placesToStay": {
+    "header": "Places to stay"
   }
 }
 
