@@ -1,0 +1,45 @@
+@import '../../../styles/colors';
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.place {
+    &-box {
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        background: $pink-background;
+        &:last-child {
+            padding-bottom: 10rem;
+        }
+    }
+    &-header {
+        @include big-fancy-font($pink-bright-faded);
+    }
+
+    &-anchor {
+        color: $pink-bright;
+        display: flex;
+        flex-direction: column;
+        text-underline: none;
+        margin: 0.5rem 0 2rem;
+
+        &:visited {
+            color: $pink-bright;
+        }
+
+        &:hover {
+            color: $gray;
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .place {
+        &-header {
+            font-size: $font-size-header-mobile;
+        }
+        &-box {
+            margin-top: 2rem;
+        }
+    }
+}

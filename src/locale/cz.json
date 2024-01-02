@@ -64,6 +64,9 @@
       "warning": "Ajejda, něco jsi asi zapomněl vyplnit. Prosím vyplň formulář se všemi povinnými údaji."
     },
     "invalid": "vyplň správně"
+  },
+  "placesToStay": {
+    "header": "Ubytování"
   }
 }
 
