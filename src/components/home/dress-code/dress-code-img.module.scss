@@ -1,0 +1,26 @@
+.image {
+    margin: 10rem auto;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+
+    &--img {
+        max-width: 100%;
+        height: auto;
+        mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.5) 70%
+        );
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .image {
+        width: 25rem;
+        margin: 5rem auto;
+    }
+}
