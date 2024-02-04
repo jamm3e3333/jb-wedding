@@ -4,7 +4,6 @@
 
 .place {
     &-box {
-        margin-top: 10rem;
         display: flex;
         flex-direction: column;
         background: $pink-background;
@@ -39,7 +38,7 @@
             font-size: $font-size-header-mobile;
         }
         &-box {
-            margin-top: 2rem;
+            margin-top: 45rem;
         }
     }
 }

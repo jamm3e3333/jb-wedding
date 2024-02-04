@@ -1,10 +1,10 @@
 @import './colors';
 @import './variables';
 
-@mixin big-fancy-font($font-color) {
+@mixin big-fancy-font($font-color, $font-size: 7rem) {
     color: $font-color;
     font-family: $font-fancy;
-    font-size: 7rem;
+    font-size: $font-size;
     font-weight: 700;
     letter-spacing: 0.3rem;
 }

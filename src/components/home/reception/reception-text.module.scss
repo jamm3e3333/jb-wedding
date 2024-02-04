@@ -10,18 +10,32 @@
     color: $pink-bright-faded;
 
     &--header {
-        @include big-fancy-font($pink-bright-faded);
-        width: 50%;
+        @include big-fancy-font($pink-bright-faded, 4.5rem);
         text-align: center;
+        margin: 4rem auto 1rem;
+    }
+
+    &--mappoint {
+        padding-right: 0.6rem;
+        transform: translateY(0.4rem);
     }
 
     &--place {
-        text-align: center;
-    }
-
-    &--attention {
-        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        color: $pink-bright;
+        align-items: baseline;
+        justify-content: center;
+        margin: 1rem auto;
+        width: 100%;
         font-size: 2rem;
+        &:visited {
+            color: $pink-bright;
+        }
+
+        &:hover {
+            color: $gray;
+        }
     }
 }
 
@@ -36,7 +50,13 @@
             font-size: $font-size-header-mobile;
         }
 
+        &--mappoint {
+            display: inline;
+            transform: translateY(0.4rem);
+        }
         &--place {
+            display: block;
+            width: 80%;
             text-align: center;
         }
     }

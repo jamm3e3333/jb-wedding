@@ -12,7 +12,7 @@ const ReceptionImage: React.FC = () => {
         if (isInView) {
             void animationController.start('visible');
         }
-    }, [isInView]);
+    }, [animationController, isInView]);
 
     return (
         <motion.div
