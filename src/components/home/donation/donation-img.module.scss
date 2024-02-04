@@ -1,0 +1,22 @@
+@import '../../../styles/colors';
+
+.donation-picture {
+    display: block;
+    width: 25%;
+    margin: 2rem;
+    &--img {
+        mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.6) 70%
+        );
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .donation-picture {
+        width: 60%;
+    }
+}

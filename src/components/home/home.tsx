@@ -5,6 +5,7 @@ import LandingAnnouncement from './../home/landing-announcement/landing-announce
 import Reception from './../home/reception/reception';
 import PlaceToStay from './place-to-stay/place-to-stay';
 import DressCode from './dress-code/dress-code';
+import Donation from './donation/donation';
 
 const COVER_IMAGE_FILE_PATH = './img/bj_pier_walking.webp';
 const GRADIENT_DIRECTION = 'to right';
@@ -31,6 +32,7 @@ function Home() {
             <Reception />
             <PlaceToStay />
             <DressCode />
+            <Donation />
         </>
     );
 }
