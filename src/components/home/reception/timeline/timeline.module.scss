@@ -1,0 +1,53 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/variables';
+
+.event {
+    width: 90%;
+    text-align: left;
+    margin: 2rem auto;
+
+    &--timeline {
+        position: relative;
+        border-left: 4px solid lighten($pink-bright-faded, 10%);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        background-color: lighten($whitest, 2%);
+        box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 2rem;
+            width: 2rem;
+            background: radial-gradient(
+                circle,
+                $pink-bright-faded 50%,
+                transparent 50%
+            );
+            border-radius: 50%;
+            border: 0.3rem solid $pink-bright-faded;
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &--time,
+    &--name {
+        font-weight: bold;
+        color: darken($pink-bright-faded, 1%);
+        margin: 0 3rem;
+    }
+}

@@ -15,7 +15,14 @@
   "ceremony": {
     "name": "Místo & čas konání",
     "place": "Dominikánská republika",
-    "watchWebsite": "Sleduj stránku pro další info."
+    "watchWebsite": "Sleduj stránku pro další info.",
+    "timeline": {
+      "event": {
+        "arrive": "Přijeď včas a přines velo",
+        "ceremonyStart": "Začátek svatby",
+        "partyEnd": "Konec párty"
+      }
+    }
   },
   "home": "Domů",
   "rsvp": {

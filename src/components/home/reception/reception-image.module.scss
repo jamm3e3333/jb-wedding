@@ -1,6 +1,7 @@
 @import '../../../styles/colors';
 
 .image-box {
+    position: relative;
     display: flex;
     width: 35%;
     padding: 5rem;
@@ -19,12 +20,12 @@
     .image-box {
         display: block;
         margin: 0 auto;
-        width: 30rem;
+        width: 40rem;
     }
 }
 
 @media only screen and (max-width: 500px) {
     .image-box {
-        width: 30rem;
+        width: 100%;
     }
 }

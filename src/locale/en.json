@@ -15,7 +15,14 @@
   "ceremony": {
     "name": "Ceremony & Reception",
     "place": "Dominican Republic",
-    "watchWebsite": "For more information watch the website."
+    "watchWebsite": "For more information watch the website.",
+    "timeline": {
+      "event": {
+        "arrive": "Arrive by this time",
+        "ceremonyStart": "Ceremony start",
+        "partyEnd": "Party end"
+      }
+    }
   },
   "home": "Home",
   "rsvp": {

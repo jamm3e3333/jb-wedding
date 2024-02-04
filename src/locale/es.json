@@ -15,7 +15,14 @@
   "ceremony": {
     "name": "Ceremonia & Recepción",
     "place": "República Dominicana",
-    "watchWebsite": "Mantente atento al website para más información y más detalles."
+    "watchWebsite": "Mantente atento al website para más información y más detalles.",
+    "timeline": {
+      "event": {
+        "arrive": "Llega a esta hora para que iniciemos a tiempo",
+        "ceremonyStart": "Inicio de la ceremonia",
+        "partyEnd": "Fin de la rumba \uD83D\uDC83\uD83C\uDFFD \uD83D\uDD7A\uD83C\uDFFB "
+      }
+    }
   },
   "home": "Inicio",
   "rsvp": {
