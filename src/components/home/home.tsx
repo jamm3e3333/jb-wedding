@@ -4,6 +4,7 @@ import CoverWithImage, {
 import LandingAnnouncement from './../home/landing-announcement/landing-announcement';
 import Reception from './../home/reception/reception';
 import PlaceToStay from './place-to-stay/place-to-stay';
+import DressCode from './dress-code/dress-code';
 
 const COVER_IMAGE_FILE_PATH = './img/bj_pier_walking.webp';
 const GRADIENT_DIRECTION = 'to right';
@@ -29,6 +30,7 @@ function Home() {
             </CoverWithImage>
             <Reception />
             <PlaceToStay />
+            <DressCode />
         </>
     );
 }

@@ -10,7 +10,7 @@
     color: $pink-bright-faded;
 
     &--header {
-        @include big-fancy-font($pink-bright-faded, 4.5rem);
+        @include big-fancy-font($pink-bright-faded);
         text-align: center;
         margin: 4rem auto 1rem;
     }

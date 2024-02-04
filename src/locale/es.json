@@ -72,8 +72,12 @@
     },
     "invalid": "rellena correctamente"
   },
-"placesToStay": {
-  "header": "¿Dónde quedarse?"
-}
+  "placesToStay": {
+    "header": "¿Dónde quedarse?"
+  },
+  "dressCode": {
+    "header": "Código de vestimenta",
+    "tropical": "\"Tropical informal\""
+  }
 }
 

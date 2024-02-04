@@ -1,0 +1,39 @@
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
+
+.dresscode {
+    &--box {
+        display: block;
+        margin: 6rem auto 1rem;
+    }
+
+    &--name,
+    &--header {
+        text-align: center;
+        margin: 0;
+    }
+
+    &--header {
+        @include big-fancy-font($pink-bright-faded);
+    }
+
+    &--name {
+        @include big-fancy-font($pink-bright-faded, 2.5rem);
+        font-style: italic;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .dresscode {
+        &--box {
+            margin-top: 5rem;
+        }
+        &--header {
+            font-size: $font-size-header-mobile;
+        }
+
+        &--name {
+            font-size: $font-size-para-mobile;
+        }
+    }
+}

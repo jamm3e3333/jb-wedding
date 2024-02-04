@@ -74,6 +74,10 @@
   },
   "placesToStay": {
     "header": "Ubytování"
+  },
+  "dressCode": {
+    "header": "Dress Code",
+    "tropical": "„Tropický pohodlný\""
   }
 }
 

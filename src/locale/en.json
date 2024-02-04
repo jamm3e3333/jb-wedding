@@ -74,6 +74,10 @@
   },
   "placesToStay": {
     "header": "Places to stay"
+  },
+  "dressCode": {
+    "header": "Dress Code",
+    "tropical": "\"Tropical\""
   }
 }
 
