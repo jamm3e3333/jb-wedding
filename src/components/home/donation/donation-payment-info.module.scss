@@ -1,0 +1,27 @@
+@import '../../../styles/colors';
+
+.donation {
+    &--payment {
+        display: block;
+        margin: 0 auto;
+        text-align: left;
+    }
+    &--card-icon {
+        display: inline;
+        transform: translateY(0.6rem);
+        color: $pink-bright-faded;
+    }
+    &--account-number {
+        display: inline;
+        margin-left: 1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .donation {
+        &--card-icon {
+            width: 2rem;
+            transform: translateY(0.4rem);
+        }
+    }
+}

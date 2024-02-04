@@ -19,8 +19,8 @@
     "timeline": {
       "event": {
         "arrive": "Arrive by this time",
-        "ceremonyStart": "Ceremony start",
-        "partyEnd": "Party end"
+        "ceremonyStart": "Ceremony starts",
+        "partyEnd": "Party ends"
       }
     }
   },
@@ -78,6 +78,15 @@
   "dressCode": {
     "header": "Dress Code",
     "tropical": "\"Tropical\""
+  },
+  "giftList": {
+    "header": "Gift List",
+    "thanks": "Thank you for thinking about us and wanting to give us a gift.",
+    "contribution": "If you want to leave us a gift, either for our honeymoon or for our new home, you can make a contribution to any of these accounts:",
+    "account": {
+      "savings": "BHD Savings Account: ",
+      "cardID": "ID Card: "
+    }
   }
 }
 

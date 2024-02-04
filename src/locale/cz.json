@@ -78,6 +78,15 @@
   "dressCode": {
     "header": "Dress Code",
     "tropical": "„Tropický pohodlný\""
+  },
+  "giftList": {
+    "header": "Seznam dárků",
+    "thanks": "Děkujeme, že na nás myslíte.",
+    "contribution": "Jestli nám chcete dát dárek, ať už na naše líbánky, nebo na náš nový domov, můžete přispět na jeden z těchto účtů:",
+    "account": {
+      "savings": "Účet BHD: ",
+      "cardID": "Identifikační průkaz: "
+    }
   }
 }
 

@@ -77,7 +77,16 @@
   },
   "dressCode": {
     "header": "Código de vestimenta",
-    "tropical": "\"Tropical informal\""
+    "tropical": "\"Tropical\""
+  },
+  "giftList": {
+    "header": "Lista de regalos",
+    "thanks": "Gracias por pensar en nosotros y querer darnos un presente.",
+    "contribution": "Si quieres dejarnos un presente, ya sea para nuestra luna de miel o para nuestro nuevo hogar, puedes hacer una contribución a cualquiera de estas cuentas:",
+    "account": {
+      "savings": "Cuenta de ahorros del BHD: ",
+      "cardID": "Cédula: "
+    }
   }
 }
 
