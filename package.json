@@ -11,7 +11,7 @@
     "build:region:types": "i18next-resources-for-ts interface -i src/locale -o src/@types/resource.d.ts"
   },
   "dependencies": {
-    "axios": "^1.5.1",
+    "axios": "^1.6.3",
     "framer-motion": "^10.16.4",
     "i18next": "^23.5.0",
     "i18next-browser-languagedetector": "^7.1.0",
